@@ -2,8 +2,8 @@ import random
 
 
 class Environment(object):
-    def __init__(self):
-        self.__steps_left = 10
+    def __init__(self, max_steps):
+        self.__steps_left = max_steps
 
     def get_observation(self):
         return [0.0, 0.0, 0.0]
@@ -26,6 +26,8 @@ class Agent(object):
         self.__total_reward = 0.0
 
     def step(self, env):
+        _ = env.get_observation()
+        # use current observations to take an action
         actions = env.get_actions()
         reward = env.get_reward(random.choice(actions))
         self.__total_reward += reward
@@ -34,7 +36,7 @@ class Agent(object):
         return self.__total_reward
 
 if __name__ == "__main__":
-    env = Environment()
+    env = Environment(max_steps=10)
     agent = Agent()
 
     while not env.is_done():
