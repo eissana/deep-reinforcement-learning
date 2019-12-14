@@ -32,6 +32,7 @@ def play(env):
 
 if __name__ == "__main__":
     env = RandomActionWrapper(gym.make('CartPole-v0'))
+    env = gym.wrappers.Monitor(env, f"recording-{__file__}", force=True)
     env.reset()
 
     total_reward, total_steps = play(env)
