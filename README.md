@@ -11,3 +11,19 @@ To create videos, you may need `xvfb` tool, too. For example, to run on a machin
 ```sh
 xvfb-run -s "-screen 0 640x480x24" python app/chapter02/cartpole_random.py
 ```
+
+## TensorBoard
+
+To use tensorboard, make sure tensorflow, tensorboard, and tensorboardX are installed in the virtual environment. Then, run tensorboard server as follows from the root directory of this project:
+
+```sh
+tensorboard --logdir=runs --host=localhost --port=6006
+```
+
+where logs will be stored in the `runs/` directory. Also, run the tensorboard example in another terminal as follows:
+
+```sh
+python app/chapter03/tensorboard.py
+```
+
+Finally, go to `http://localhost:6006` from your browser to see the details: plots of `sin`, `cos`, and `tan` in this example.
