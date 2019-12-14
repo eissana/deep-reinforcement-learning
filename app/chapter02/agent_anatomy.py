@@ -1,4 +1,4 @@
-import random
+import numpy as np
 
 
 class Environment(object):
@@ -18,7 +18,7 @@ class Environment(object):
         if self.is_done():
             raise Exception("Game is over")
         self.__steps_left -= 1
-        return random.random()
+        return np.random.rand()
 
 
 class Agent(object):
@@ -29,11 +29,12 @@ class Agent(object):
         _ = env.get_observation()
         # use current observations to take an action
         actions = env.get_actions()
-        reward = env.get_reward(random.choice(actions))
+        reward = env.get_reward(np.random.choice(actions))
         self.__total_reward += reward
 
     def total_reward(self):
         return self.__total_reward
+
 
 if __name__ == "__main__":
     env = Environment(max_steps=10)
