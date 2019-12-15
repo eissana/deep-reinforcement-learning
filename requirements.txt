@@ -3,8 +3,8 @@ gym==0.10.9
 ptan==0.3
 opencv-python==3.4.3.18
 scipy==1.1.0
-torch==0.4.1
-torchvision==0.2.1
+torch==1.2.0
+torchvision==0.4.0
 tensorboardX==1.6
 tensorflow==1.13.1
 tensorboard==1.13.0
