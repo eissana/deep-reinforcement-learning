@@ -1,6 +1,10 @@
 # Deep Reinforcement Learning
 
-This repo includes codes from Deep Reinforcement Learning Hands-On book by Maxim Lapan.
+This repo includes codes from Deep Reinforcement Learning Hands-On book by Maxim Lapan. The reference repo can be cloned as follows:
+
+```sh
+git clone https://github.com/PacktPublishing/Deep-Reinforcement-Learning-Hands-On.git
+```
 
 ## Requirements
 
