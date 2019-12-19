@@ -3,3 +3,6 @@ __pycache__
 venv
 recording-app
 runs
+build
+dist
+*.egg-info
