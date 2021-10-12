@@ -1,7 +1,7 @@
 numpy==1.16.0
 gym==0.14.0
 ptan==0.3
-opencv-python==3.4.3.18
+opencv-python==4.2.0.32
 scipy==1.1.0
 torch==1.2.0
 torchvision==0.4.0
